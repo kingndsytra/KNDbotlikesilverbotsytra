@@ -46,7 +46,7 @@ let color = '0xffffff'
     const embed = new Discord.RichEmbed()
     .setColor(color)
     .setImage(`${body.image}`)
-    message.channel.send(`**The magic API says:** **${body.answer}**`, {embed});
+    message.channel.send(`**The Magic API Says:** **${body.answer}**`, {embed});
 
 }
 });
@@ -547,6 +547,7 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 『!cv <name> / انشاء رووم فويس』
 『!delet <name> / مسح الشات او الرووم فويس』
 『❖!ccolors <number> / ينشا لك الوان مع كم الوان تبي』
+**
    `,`
         ***__Music orders__***
 **
@@ -1232,12 +1233,12 @@ var v1 = new Discord.RichEmbed()
   v1.setTimestamp(new Date())
   v1.setColor("#6a109d")
   v1.setDescription('***__ انتظر .. جاري الحصول علي البيانات __***')
-  v1.setFooter("# | Sliver TeaM |")
+  v1.setFooter("# | By S Y T R A|")
 var heroo = new Discord.RichEmbed()
 .setColor('#6a109d')
 .setTimestamp(new Date())
 .setThumbnail(client.user.avatarURL)
-.setTitle('SLiver Bot Info')
+.setTitle('KINGS NEVER DIE')
 .setURL('https://discordapp.com/oauth2/authorize?client_id=471464656242737183&permissions=2080898225&scope=bot')
 .setAuthor(client.user.username,client.user.avatarURL)
 .addField("**البرفكس** :",`**[ ${prefix} ]**`,true)
@@ -1438,19 +1439,6 @@ message.react("❌")
       .addField('عدد اعضاء السيرفر',`${message.guild.memberCount}`)
       message.channel.send(IzRo);
     });
-
-client.on('message', message => {
-if(message.content === `${prefix}voiceonline`) {
-  message.guild.createChannel(`Voice Online : ${message.guild.members.filter(g => g.voiceChannel).size} ` , "voice").then(c => {
-   c.overwritePermissions(message.guild.id, {CONNECT: false});
-    message.channel.send(`**Voice Online : ${message.guild.members.filter(g => g.voiceChannel).size}**`);
-    setInterval(() => {
-    c.setName(`Voice Online : ${message.guild.members.filter(g => g.voiceChannel).size} `)
-    },1000);
-  })
-
-}
-});
 
 
 client.on("message", async message => {
